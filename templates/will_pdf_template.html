@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Last Will and Testament</title>
+    <style>
+        body {
+            font-family: Times New Roman, serif;
+            line-height: 1.6;
+            margin: 40px;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>LAST WILL AND TESTAMENT</h1>
+    <p>I, {{ full_name }} [ID No. {{ id_number }}] of the Post Office Box Number {{ po_number }} {{ town }} in the Republic of Kenya, being of sound mind and having attained majority age, hereby declare this to be my Last Will and Testament.</p>
+    <p>I revoke all prior Wills and Codicils made by me.</p>
+
+    <h2>DECLARATIONS</h2>
+    <h3>Applicable Laws</h3>
+    <p>The interpretation of this Will shall be construed in accordance with the relevant provisions in the Law of Succession Act, Chapter 160 of the Laws of Kenya.</p>
+
+    <h2>BENEFICIARIES</h2>
+    <h3>Marital Status</h3>
+    <p>I declare that as of the day of execution of this will my wife is {{ marital_status }}.</p>
+
+    <h3>Children:</h3>
+    <p>I declare that i have the following children:</p>
+    <ul>
+        {% for child in children %}
+        <li>{{ child }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>APPOINTMENT OF EXECUTORS AND TRUSTEES</h2>
+    I appoint the following as my executors and trustees under this will, thereby granting them the powers granted to trustees by the applicable laws in Kenya:
+    <ul>
+        {% for executor in executors %}
+        <li>{{ executor }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>PAYMENT OF DEBTS AND EXPENSES</h2>
+    <p>{{ debts }}</p>
+
+    <h2>DISPOSITION OF PROPERTY</h2>
+    <p>I give the following bequests;</p>
+    <ul>
+        {% for bequest in bequests %}
+        <li>{{ bequest }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>TANGIBLE PERSONAL PROPERTY</h2>
+    <p>{{ personal_property }}</p>
+
+    <h2>RESIDENTIAL ESTATE</h2>
+    <p>I give and bequeath to {{ residential_estate }}, without any encumbrances, the residential home used by me at the time of death as a seasonal or personal home. If he/she predeceases me, I direct it to be part of my residuary estate.</p>
+
+    <h2>GUARDIANSHIP</h2>
+    <p>I appoint {{ guardian }} as the guardian of the person and property of my minor children.</p>
+
+    <h2>TRUST</h2>
+    <p>I give and bequeath {{ trust }} for its own use and benefit absolutely </p>
+
+    <h2>MISCELLANEOUS</h2>
+    <h3>Trustee Compensation</h3>
+    <p>I direct that my trustees be allowed compensation of {{compensation}} for their services.</p>
+    <p>If any provision of this will is hekd to be invalid or unenforceable, the remaining provisions shall remain in full force and effect.</p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} About Us {% endblock %}
+
+{% block content %}
+<section id="about-us" class="about-us section py-5" style="background-color: lightblue;">
+    <div class="container">
+        <div class="section-title text-center mb-4" data-aos="fade-up">
+            <h2>About Us</h2>
+        </div>
+
+        <div class="content" data-aos="fade-up" data-aos-delay="100">
+            <p class="lead">
+                We are a pioneering legal platform dedicated to making legal assistance and document preparation accessible to everyone. Our mission is to empower individuals and businesses with the tools and resources they need to navigate legal complexities with confidence and ease.
+            </p>
+
+            <h3 class="mt-4">Our Vision</h3>
+            <p>
+                To be the leading platform for simplified legal services, bridging the gap between legal expertise and everyday needs. We strive to ensure that no one is excluded from understanding and accessing their legal rights.
+            </p>
+
+            <h3 class="mt-4">What We Offer</h3>
+            <ul>
+                <li>Personal legal forms like wills and affidavits.</li>
+                <li>Business agreements and contracts.</li>
+                <li>Expertly curated templates and guides.</li>
+                <li>Connections to additional resources and legal professionals.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

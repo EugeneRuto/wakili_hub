@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {% endblock %}
+
+
+{% block content %}
+<main id="main" class="main home" role="main">
+    <section id="main-alert" class="main-alert">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert-box">
+                        <div class="row">
+                            <div class="col-12 mb-3 mb-md-0">
+                                <div class="wysiwyg-widget">
+                                    <h4>If you're facing a sexual offense issue, you're not alone.</h4>
+                                    <p>Visit our <a href="{% url 'wakili_app:so_help' %}">Sexual Offense Help Guide</a> to learn how to find legal assistance and resources near you.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="main-banner" class="main-banner d-print-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-xxl-4 col-help">
+                    <h1 class="text-center text-md-start">Find Legal Help Near You</h1>
+                    <select id="find-help-select" class="form-select find-help-select">
+                        <option value="">Choose a County</option>
+                        <option value="https://Baringo.legalhelp.ke">Baringo</option>
+                        <option value="https://Bomet.legalhelp.ke">Bomet</option>
+                        <option value="https://Bungoma.legalhelp.ke">Bungoma</option>
+                        <option value="https://Busia.legalhelp.ke">Busia</option>
+                        <option value="https://Elgeyo-Marakwet.legalhelp.ke">Elgeyo-Marakwet</option>
+                        <option value="https://Embu.legalhelp.ke">Embu</option>
+                        <option value="https://Garissa.legalhelp.ke">Garissa</option>
+                        <option value="https://Homa Bay.legalhelp.ke">Homa Bay</option>
+                        <option value="https://Isiolo.legalhelp.ke">Isiolo</option>
+                        <option value="https://Kajiado.legalhelp.ke">Kajiado</option>
+                        <option value="https://Kakamega.legalhelp.ke">Kakamega</option>
+                        <option value="https://Kericho.legalhelp.ke">Kericho</option>
+                        <option value="https://Kiambu.legalhelp.ke">Kiambu</option>
+                        <option value="https://Kilifi.legalhelp.ke">Kilifi</option>
+                        <option value="https://Kirinyaga.legalhelp.ke">Kirinyaga</option>
+                        <option value="https://Kisii.legalhelp.ke">Kisii</option>
+                        <option value="https://Kisumu.legalhelp.ke">Kisumu</option>
+                        <option value="https://Kitui.legalhelp.ke">Kitui</option>
+                        <option value="https://Kwale.legalhelp.ke">Kwale</option>
+                        <option value="https://Laikipia.legalhelp.ke">Laikipia</option>
+                        <option value="https://Lamu.legalhelp.ke">Lamu</option>
+                        <option value="https://Machakos.legalhelp.ke">Machakos</option>
+                        <option value="https://Makueni.legalhelp.ke">Makueni</option>
+                        <option value="https://Mandera.legalhelp.ke">Mandera</option>
+                        <option value="https://Marsabit.legalhelp.ke">Marsabit</option>
+                        <option value="https://Meru.legalhelp.ke">Meru</option>
+                        <option value="https://Migori.legalhelp.ke">Migori</option>
+                        <option value="https://Mombasa.legalhelp.ke">Mombasa</option>
+                        <option value="https://Murang'a.legalhelp.ke">Murang'a</option>
+                        <option value="https://Nairobi City.legalhelp.ke">Nairobi City</option>
+                        <option value="https://Nakuru.legalhelp.ke">Nakuru</option>
+                        <option value="https://Nandi.legalhelp.ke">Nandi</option>
+                        <option value="https://Narok.legalhelp.ke">Narok</option>
+                        <option value="https://Nyamira.legalhelp.ke">Nyamira</option>
+                        <option value="https://Nyandarua.legalhelp.ke">Nyandarua</option>
+                        <option value="https://Nyeri.legalhelp.ke">Nyeri</option>
+                        <option value="https://Samburu.legalhelp.ke">Samburu</option>
+                        <option value="https://Siaya.legalhelp.ke">Siaya</option>
+                        <option value="https://Taita-Taveta.legalhelp.ke">Taita-Taveta</option>
+                        <option value="https://Tana River.legalhelp.ke">Tana River</option>
+                        <option value="https://Tharaka-Nithi.legalhelp.ke">Tharaka-Nithi</option>
+                        <option value="https://Trans-Nzoia.legalhelp.ke">Trans-Nzoia</option>
+                        <option value="https://Turkana.legalhelp.ke">Turkana</option>
+                        <option value="https://Uasin Gishu.legalhelp.ke">Uasin Gishu</option>
+                        <option value="https://Vihiga.legalhelp.ke">Vihiga</option>
+                        <option value="https://Wajir.legalhelp.ke">Wajir</option>
+                        <option value="https://West Pokot.legalhelp.ke">West Pokot</option>
+                        <!-- Add more counties as needed -->
+                    </select>
+                    <div class="card d-none d-md-block">
+                        <div class="card-body">
+                            <div class="align-items-center d-flex">
+                                <div class="topic-icon"><span class="lh-icon-map"></span></div>
+                                <h5 class="card-title"><a class="stretched-link" href="{% url 'wakili_app:kenyan_map' %}" >or Choose by Map</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="main-content" class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="wysiwyg-widget">
+                        <div class="topic-list" id="topic-list">
+                            <h2 class="mb-4">Legal Help Guides</h2>
+                            <div class="g-4 row">
+                                <div class="col-12 col-lg-4 col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="align-items-center align-items-md-start d-flex">
+                                                <div class="topic-icon"><span class="lh-icon-nonprofit-law"></span></div>
+                                                <h3 class="card-title"><a class="stretched-link" href="#legal-aid">Legal Aid and other Low-Cost Legal Help</a></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="align-items-center align-items-md-start d-flex">
+                                                <div class="topic-icon"><span class="lh-icon-public-benefits"></span></div>
+                                                <h3 class="card-title"><a class="stretched-link" href="#court-fees">Court Fees and Getting Court Fees Paid</a></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="align-items-center align-items-md-start d-flex">
+                                                <div class="topic-icon"><span class="lh-icon-health"></span></div>
+                                                <h3 class="card-title"><a class="stretched-link" href="#reproductive-rights">Reproductive Health Care Rights and Access</a></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add more cards as needed -->
+                            </div>
+                            <div class="row">
+                                <div class="col-12 d-flex justify-content-end mt-4">
+                                    <h4><a href="#all-resources">All Resources</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}

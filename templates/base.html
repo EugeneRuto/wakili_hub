@@ -1,0 +1,280 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>{% block title %}LegalHelp Kenya{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'assets/eugo.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.3.3-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets\mystyles.css' %}">
+    {% block styles %}{% endblock %}
+
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header" class="header" role="banner">
+            <div id="header-top" class="header-top d-print-none">
+                <div class="container">
+                    <div class="d-flex flex-row justify-content-end align-items-center">
+                        <div id="text-sizer" class="text-sizer d-none d-lg-inline-block">
+                            <a href="{% url 'wakili_app:login' %}" >Login</a>
+                            <a href="{% url 'wakili_app:register' %}" >Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="header-main" class="header-main">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-8">
+                            <div class="site-logo">
+                                <a href="/" title="WakiliHub Kenya">
+                                    <img src="{% static 'Images\Wakili hub 2.0.png' %}" class="img-fluid" alt="LegalHelp Kenya">
+                                </a>
+                                <h2 class="site-title mt-2">WakiliHub</h2>
+                            </div>
+                            <!-- <h3 class="d-block d-md-none tag-line">Simplifying legal matters for you</h3> -->
+                        </div>
+                        <div class="col-4 text-end align-self-end">
+                            <h3 class="d-none d-md-block tag-line">Simplifying legal matters for you</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="header-nav" class="header-nav d-print-none">
+                <nav class="navbar navbar-expand-md">
+                    <div class="container">
+                        <div class="site-logo">
+                            <a href="/" title="WakiliHub Kenya">
+                                <img src="{% static 'Images\Wakili hub 2.0.png' %}" 
+                                     class="img-fluid" alt="LegalHelp Kenya">
+                            </a>
+                        </div>
+                        <button class="navbar-toggler collapsed ms-auto me-2 toggler-main" type="button" 
+                                data-bs-toggle="collapse" data-bs-target="#navbar-collapse" 
+                                aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="lh-icon-menu-light"></span>
+                            <span class="lh-icon-cross-light"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-between" id="navbar-collapse">
+                            <ul class="navbar-nav">
+                                <!-- Personal Forms Dropdown -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="personalDropdown" role="button" 
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        Personal Forms
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="personalDropdown">
+                                        <li class="dropdown-header">Estate Planning</li>
+                                        <li><a class="dropdown-item" href="{% url 'wakili_app:create_will' %}">Wills and Testaments</a></li>
+                                        <li><a class="dropdown-item" href="#">Living Will</a></li>
+                                        <li><a class="dropdown-item" href="#">Power of Attorney</a></li>
+                                        <li><a class="dropdown-item" href="#">Guardianship Agreement</a></li>
+                                        <li><a class="dropdown-item" href="#">Probate Application</a></li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="dropdown-header">Real Estate</li>
+                                        <li><a class="dropdown-item" href="#">Lease Agreement</a></li>
+                                        <li><a class="dropdown-item" href="#">Land Sale Agreement</a></li>
+                                        <li><a class="dropdown-item" href="#">Eviction Notice</a></li>
+                                        <li><a class="dropdown-item" href="#">Property Transfer Form</a></li>
+                                        <li><a class="dropdown-item" href="#">Survey and Subdivision Forms</a></li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="dropdown-header">Family Law</li>
+                                        <li><a class="dropdown-item" href="#">Divorce Petition</a></li>
+                                        <li><a class="dropdown-item" href="#">Custody Agreement</a></li>
+                                        <li><a class="dropdown-item" href="#">Adoption Forms</a></li>
+                                        <li><a class="dropdown-item" href="#">Separation Agreement</a></li>
+                                        <li><a class="dropdown-item" href="#">Paternity Acknowledgment</a></li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="dropdown-header">Other Personal Matters</li>
+                                        <li><a class="dropdown-item" href="#">Name Change Form</a></li>
+                                        <li><a class="dropdown-item" href="#">Affidavit</a></li>
+                                        <li><a class="dropdown-item" href="#">Police Abstract Request</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Business Forms Dropdown -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="businessDropdown" role="button" 
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        Business Forms
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="businessDropdown">
+                                        <li class="dropdown-header">Starting a Business</li>
+                                        <li><a class="dropdown-item" href="#">Business Name Registration Form</a></li>
+                                        <li><a class="dropdown-item" href="#">Incorporation Documents</a></li>
+                                        <li><a class="dropdown-item" href="#">Partnership Agreement</a></li>
+                                        <li><a class="dropdown-item" href="#">Memorandum and Articles of Association</a></li>
+                                        <li><a class="dropdown-item" href="#">Tax Registration Form</a></li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="dropdown-header">Managing a Business</li>
+                                        <li><a class="dropdown-item" href="#">Employment Contract</a></li>
+                                        <li><a class="dropdown-item" href="#">Non-Disclosure Agreement (NDA)</a></li>
+                                        <li><a class="dropdown-item" href="#">Board Resolution</a></li>
+                                        <li><a class="dropdown-item" href="#">Minutes of Meetings</a></li>
+                                        <li><a class="dropdown-item" href="#">Bylaws and Rules</a></li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="dropdown-header">Commercial Transactions</li>
+                                        <li><a class="dropdown-item" href="#">Sale of Goods Agreement</a></li>
+                                        <li><a class="dropdown-item" href="#">Loan Agreement</a></li>
+                                        <li><a class="dropdown-item" href="#">Invoice Templates</a></li>
+                                        <li><a class="dropdown-item" href="#">Debt Acknowledgment Form</a></li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="dropdown-header">Real Estate</li>
+                                        <li><a class="dropdown-item" href="#">Commercial Lease Agreement</a></li>
+                                        <li><a class="dropdown-item" href="#">Property Management Agreement</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Miscellaneous Legal Forms Dropdown -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="miscDropdown" role="button" 
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        Miscellaneous Legal Forms
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="miscDropdown">
+                                        <li><a class="dropdown-item" href="#">Contract Templates</a></li>
+                                        <li><a class="dropdown-item" href="#">Promissory Notes</a></li>
+                                        <li><a class="dropdown-item" href="#">Waiver Forms</a></li>
+                                        <li><a class="dropdown-item" href="#">Complaint Filing Form</a></li>
+                                        <li><a class="dropdown-item" href="#">Legal Notice Templates</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'wakili_app:about_us' %}">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'wakili_app:our_partners' %}">Our Partners</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'wakili_app:re_sources' %}">Resources</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'wakili_app:retrieve_feedback' %}"> Retrieve Feedbacks</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                
+            </div>
+        </header>
+        
+        <!-- Main Content Section -->
+  <main class="main" style="padding-top: 70px;">
+    {% block content %}
+    <!-- Page-specific content will go here -->
+    {% endblock %}
+  </main>
+
+  <section id="main-footer" class="main-footer d-print-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-3 mb-md-0 col-md-4">
+                <div class="content-block">
+                    <div class="wysiwyg-widget">
+                        <h4 align="center"><img alt="" src="{% static 'Images\Wakili hub 2.0.png' %}" style="height:60px; width:185px"></h4>
+                        <h5><a href="{% url 'wakili_app:document_generator' %}">Create Legal Documentsfor free.</a> </h5>
+                        <p>Create complete legal documents to protect your rights in Land, family law, succession, and many other types of problems, for free.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-3 mb-md-0 col-md-4">
+                <div class="content-block">
+                    <div class="wysiwyg-widget">
+                        <h4 align="center"><img alt="" src="{% static 'Images\gbv.png' %}" style="max-width: 100%; height: 60px;"> </h4>
+                        <h5><a href="{% url 'wakili_app:gbv_help' %}"> Gender Based Violence Legal Help in Kenya</a></h5>
+                        <p>Are you a victim of gender based violence. Click here to to get a guide on how you can be assisted.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 mb-3 mb-md-0 col-md-4">
+                <div class="content-block">
+                    <div class="wysiwyg-widget">
+                        <h4>Coming to your aid in the face of Human Rights Violations</h4>
+                        <h5>Were your rights as outlined in the constitution infringed?</h5>
+                        <p>Go to our <a href="#human rights-help">Human Rights Legal Help</a> page to learn more about Human Rights Violations assistance, legal help in your area</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<footer id="footer" class="footer d-print-none" role="contentinfo">
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-12 col-md-4 section">
+            <div class="row align-items-center">
+                <!-- <div class="col-12">
+                    <div class="site-logo">
+                        <a href="#" title="LegalHelp Kenya">
+                            <img src="{% static 'Images\Wakili hub 2.0.png' %}" class="img-fluid" alt="LegalHelp Kenya">
+                        </a>
+                    </div>
+                </div> -->
+                <div class="col-12">
+                    <p class="d-block d-md-none lawhelp-link">
+                        <a href="/" target="_blank" title="Find legal help in other counties" aria-label="LegalHelp Kenya - Opens in new window">Find legal help in other counties</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 order-1 order-md-0 copyright">
+            <p class="d-none d-md-block lawhelp-link">
+                <a href="/" target="_blank" title="Find legal help in other counties" aria-label="LegalHelp Kenya - Opens in new window">Find legal help in other counties</a>
+            </p>
+            <p class="powered-by">
+                <a href="#" target="_blank" title="Pro Bono Net" aria-label="Pro Bono net - Opens in new window">
+                    powered by <span>legalhelp.net</span>
+                </a>
+            </p>
+            <p class="mission">Wakili Hub Net’s online tools, legal information and referral directories are always free to use. LegalHelp Kenya and county-specific sites are maintained by Wakili Hub Net in partnership with Kenya National Commission on Human Rights, Law Society of Kenya, Legal Resources Foundation, Kituo Cha Sheria, Federation of Women Lawyers, International Justice Mission (IJM) Kenya, The National Legal Aid and Awareness Programme (NALEAP) and Amnesty International Kenya.</p>
+            <p class="copyright-text">© 2024, Wakili Hub Net, All Rights Reserved.</p>
+        </div>
+        <div class="col-12 col-md-8">
+            <div class="row">
+                <div class="col-12 col-md-6 section">
+                    <div class="row h-100">
+                        <div class="col-6">
+                            <div class="h-100 quick-links">
+                                <h4>Quick Links</h4>
+                                <ul class="list-unstyled">
+                                    <li><a class="text-break" href="#find-help">Find Help by County</a></li>
+                                    <li><a class="text-break" href="{% url 'wakili_app:help_guides' %}">Legal Help Guides</a></li>
+                                    <li><a class="text-break" href="#about-us">About Us</a></li>
+                                    <li><a class="text-break" href="#partners">Our Partners</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="h-100 site-tools">
+                                <h4>Site Tools</h4>
+                                <ul class="list-unstyled">
+                                    <li><a class="text-break" href="{% url 'wakili_app:contact_us' %}">Contact Us</a></li>
+                                    <li><a class="text-break" href="#accessibility">Accessibility</a></li>
+                                    <li><a class="text-break" href="#privacy">Privacy</a></li>
+                                    <li><a class="text-break" href="#disclaimer">Disclaimer</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+<a href="#wrapper" class="visually-hidden-focusable" title="Back to top">Back to top</a>
+<button type="button" id="back-to-top" class="btn back-to-top d-print-none d-none" title="Back to top">
+<span class="lh-icon-arrow-up"></span>
+</button>
+</div>
+<script src="{% static 'assets\js' %}"></script>
+<script src="{% static 'assets\runtime.746ef5dfb2038e577b34.js.download'%}"></script>
+<script src="{% static 'assets\my.js'%}"></script>
+<script src="{% static 'bootstrap-5.3.3-dist\js\bootstrap.bundle.min.js'%}"></script>
+<script src="{% static 'assets\mapdata.js' %}"></script>
+<script src="{% static 'assets\countrymap.js' %}"></script>
+</body>
+</html>

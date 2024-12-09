@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Legal Help Guides {% endblock %}
+{% block content %}
+<section id="sexual-offense-help" class="py-5" style="background-color: lightblue;">
+    <div class="container">
+        <h1 class="text-center mb-4">Sexual Offense Help Guide</h1>
+        <p class="text-center">If you're facing a sexual offense issue, you're not alone. Below is a comprehensive guide to help you navigate the legal system and access the resources available to you in Kenya.</p>
+
+        <!-- Background Image Section -->
+        <section id="legal-assistance" class="py-4 position-relative" style="background-image: url('{% static "Images\SO_help.jpeg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="overlay position-absolute w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5); top: 0; left: 0;"></div>
+            <div class="container text-white position-relative">
+                <h2 class="text-center mb-4">How to Find Legal Assistance</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>1. Report to the Police</h4>
+                        <p>Start by reporting the incident to your nearest police station. Ensure you obtain an Occurrence Book (OB) number after recording your statement.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>2. Seek Medical Attention</h4>
+                        <p>Visit a healthcare facility immediately for a medical check-up and obtain a P3 Form. The P3 Form is essential for legal proceedings in Kenya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps and Resources Section -->
+        <section id="resources" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Steps to Take and Resources Available</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4>3. File a Case</h4>
+                        <p>With assistance from legal professionals or paralegal support, file your case at the appropriate court. You can also approach NGOs specializing in gender-based violence for help.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>4. Counseling Services</h4>
+                        <p>Seek counseling from accredited organizations such as:
+                            <ul>
+                                <li>Gender Violence Recovery Centre (GVRC)</li>
+                                <li>FIDA Kenya</li>
+                                <li>Healthcare facilities with counseling services</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>5. Community Support</h4>
+                        <p>Engage with community-based organizations or helplines such as the Childline Kenya 116 toll-free number for support and guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+{% endblock %}

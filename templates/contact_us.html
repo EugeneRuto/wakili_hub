@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<section id="contact" class="contact section py-5" style="background-color: lightblue;">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4 g-lg-5">
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                  {{ message }}
+                </div>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            
+            <!-- Feedback Form -->
+            <div class="col-lg-7">
+                <div class="contact-form p-4 bg-white rounded" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-center mb-4">Comments and Feedback</h3>
+                    <form method="post" class="php-email-form">
+                        {% csrf_token %}
+                        <div class="row gy-4">
+                            <div class="col-md-6">
+                                <input type="text" name="name" class="form-control" value="{{ feedback.name }}" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="email" class="form-control" value="{{ feedback.email }}" placeholder="Your Email" required>
+                            </div>
+                            <div class="col-12">
+                                <textarea name="message" rows="6" class="form-control" placeholder="Message" required>{{ feedback.message }}</textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-lg-5">
+                <div class="info-box p-4 bg-white rounded" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-center mb-4">Get in Touch</h3>
+                    <p><strong>Email:</strong> <a href="mailto:eugeneruto84@gmail.com">eugeneruto84@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+254743928849">+254 743928849</a></p>
+                    <p><strong>Address:</strong> Ngara Fig Tree (Kienjeku Road), Nairobi, Kenya</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

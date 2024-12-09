@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Generate Document {% endblock %}
+{% block content %}
+<div class="bg-lightblue py-5" style="background-color: #d8ebf8;">
+    <!-- Title and Introduction -->
+    <section id="legal-docs-header" class="text-center py-4">
+        <h1 class="display-5 text-primary">Free Legal Documents for Marginalized Communities</h1>
+        <p class="lead">Empowering you with essential legal documents to protect your rights and navigate the Kenyan legal system without representation.</p>
+    </section>
+
+    <!-- Categories of Legal Documents -->
+    <section id="legal-docs-categories" class="py-4">
+        <div class="container">
+            <h2 class="text-center text-secondary mb-4">Select a Legal Document Category</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-primary">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Land and Property</h5>
+                            <p class="card-text">Draft agreements and resolve disputes related to land ownership, leases, and boundary issues.</p>
+                            <a href="#land-docs" class="btn btn-outline-primary">View Documents</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-primary">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Family and Custody</h5>
+                            <p class="card-text">Access child custody forms, spousal maintenance agreements, and more.</p>
+                            <a href="#family-docs" class="btn btn-outline-primary">View Documents</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-primary">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Succession and Wills</h5>
+                            <p class="card-text">Draft wills and other documents to ensure your family’s security after your passing.</p>
+                            <a href="#succession-docs" class="btn btn-outline-primary">View Documents</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Templates Section -->
+    <section id="document-templates" class="py-4">
+        <div class="container">
+            <h2 id="land-docs" class="text-center text-secondary mb-4">Land and Property Documents</h2>
+            <ul class="list-group mb-5">
+                <li class="list-group-item">
+                    <h5>Land Sale Agreement</h5>
+                    <p>A template for documenting the sale of land according to the <a href="https://kenyalaw.org/" class="text-primary">Land Act 2012</a>.</p>
+                    <a href="#" class="btn btn-primary">Generate Document</a>
+                </li>
+                <li class="list-group-item">
+                    <h5>Land Dispute Resolution Form</h5>
+                    <p>File a formal complaint regarding land disputes in compliance with Kenyan law.</p>
+                    <a href="#" class="btn btn-primary">Generate Document</a>
+                </li>
+            </ul>
+
+            <h2 id="family-docs" class="text-center text-secondary mb-4">Family and Custody Documents</h2>
+            <ul class="list-group mb-5">
+                <li class="list-group-item">
+                    <h5>Child Custody Agreement</h5>
+                    <p>Template for documenting custody arrangements under the <a href="https://kenyalaw.org/" class="text-primary">Children Act 2022</a>.</p>
+                    <a href="#" class="btn btn-primary">Generate Document</a>
+                </li>
+                <li class="list-group-item">
+                    <h5>Spousal Maintenance Form</h5>
+                    <p>Request for spousal maintenance in cases of separation or divorce.</p>
+                    <a href="#" class="btn btn-primary">Generate Document</a>
+                </li>
+            </ul>
+
+            <h2 id="succession-docs" class="text-center text-secondary mb-4">Succession and Wills Documents</h2>
+            <ul class="list-group mb-5">
+                <li class="list-group-item">
+                    <h5>Will Template</h5>
+                    <p>Create a will according to the <a href="https://kenyalaw.org/" class="text-primary">Law of Succession Act</a>.</p>
+                    <a href="#" class="btn btn-primary">Generate Document</a>
+                </li>
+                <li class="list-group-item">
+                    <h5>Letter of Administration</h5>
+                    <p>Apply for the legal authority to manage a deceased person’s estate.</p>
+                    <a href="#" class="btn btn-primary">Generate Document</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Legal Education Section -->
+    <section id="legal-education" class="py-4">
+        <div class="container">
+            <h2 class="text-center text-secondary mb-4">Know Your Rights</h2>
+            <p class="text-center mb-4">Understanding your rights under Kenyan law is the first step to empowerment. Explore resources below to learn more:</p>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h5>Land Ownership</h5>
+                    <p>Learn about your rights under the <a href="https://kenyalaw.org/" class="text-primary">Land Act 2012</a>.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Child Protection</h5>
+                    <p>Understand your rights under the <a href="https://kenyalaw.org/" class="text-primary">Children Act 2022</a>.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Succession Law</h5>
+                    <p>Explore your rights under the <a href="https://kenyalaw.org/" class="text-primary">Law of Succession Act</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Will {% endblock %}
+
+{% block styles %}
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 20px;
+        }
+        input, textarea {
+            border: none;
+            border-bottom: 1px dotted black;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        textarea {
+            height: 60px;
+        }
+        .repeatable > div {
+            margin-bottom: 10px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #800020; /* Deep burgundy */
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4b0014; /* Darker burgundy */
+        }
+    </style>
+{% endblock %}
+
+{% block content%}
+    <h1>LAST WILL AND TESTAMENT</h1>
+    <h2>FORM</h2>
+    <form method="POST" target="blank">
+        {% csrf_token %}
+        <label>Full Name</label>
+        <input type="text" name="full_name"  placeholder="Your full name" required>
+
+        <label>ID Number</label>
+        <input type="text" name="id_number" placeholder="Your ID number" required>
+
+        <label>Post Office Box Number</label>
+        <input type="text" name="po_number" placeholder="Your P.O number" required>
+
+        <label>Town</label>
+        <input type="text" name="town" placeholder="town" required>
+
+        <label>Wife's Full Name (if applicable)</label>
+        <input type="text" name="marital_status" placeholder="full name of the wife">
+
+        <label>Children</label>
+        <div class="repeatable">
+            <div><input type="text" name="children[]" placeholder="full name of the child"></div>
+            {% for i in "0123456789" %}
+            <div><input type="text" name="children[]"></div>
+            {% endfor %}
+        </div>
+
+        <label>Executors</label>
+        <div class="repeatable">
+            <div>
+                <textarea name="executors[]" placeholder="E.g., full name, P.O number, town"></textarea>
+            </div>
+            {% for i in "123" %}
+            <div><textarea name="executors[]"></textarea></div>
+            {% endfor %}
+        </div>
+
+        <label>Debts & Expenses (optional)</label>
+        <textarea name="debts" placeholder="Describe how you want your debts to be settled after you pass"></textarea>
+
+        <label>Bequests</label>
+        <div class="repeatable">
+            <div>
+                <textarea name="bequests[]" placeholder="E.g., I bequeath my (name of property e.g land), description of property(e.g LR number 9), to (name of person you want to give the property) who is (relationship e.g wife,husband)."></textarea>
+            </div>
+            {% for i in "0123456789" %}
+            <div><textarea name="bequests[]"></textarea></div>
+            {% endfor %}
+        </div>
+
+        <label>Tangible Personal Property</label>
+        <input type="text" name="personal_property" placeholder="full name">
+
+        <label>Residential Estate Beneficiary</label>
+        <input type="text" name="residential_estate" placeholder="Enter the full name of the person you would want to inherit your home">
+
+        <label>Guardian</label>
+        <textarea name="guardian" placeholder="full name, of P.O number,town"></textarea>
+
+        <label>Trust (Optional)</label>
+        <textarea name="trust" placeholder="E.g., amount/property, to (foundation/children’s home)."></textarea>
+
+        <label>Trustee Compensation (Optional)</label>
+        <input type="text" name="compensation" placeholder="amount">
+
+        <button type="submit">Create Will</button>
+    </form>
+{% endblock %}

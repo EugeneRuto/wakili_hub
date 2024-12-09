@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Resources {% endblock %}
+
+{% block content %}
+<section id="resources" class="resources section py-5" style="background-color: lightblue;">
+    <div class="container">
+        <div class="section-title text-center mb-4" data-aos="fade-up">
+            <h2>Resources</h2>
+        </div>
+
+        <div class="content" data-aos="fade-up" data-aos-delay="100">
+            <p class="lead">
+                Access a wide range of resources designed to educate and inform. From articles and case studies to video tutorials, we provide the tools you need to understand legal processes.
+            </p>
+
+            <h3 class="mt-4">Explore Our Resources</h3>
+            <ul>
+                <li><strong>FAQs</strong>: Find answers to common legal questions.</li>
+                <li><strong>Templates</strong>: Download ready-to-use legal document templates.</li>
+                <li><strong>Case Studies</strong>: Learn from real-world legal scenarios.</li>
+                <li><strong>Glossary</strong>: Understand key legal terms and concepts.</li>
+            </ul>
+
+            <h3 class="mt-4">Stay Updated</h3>
+            <p>
+                Visit this section regularly for the latest updates on legal trends, policy changes, and resources to keep you informed.
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

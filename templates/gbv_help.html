@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} GBV Help {% endblock %}
+{% block content %}
+<div class="bg-lightblue py-5" style="background-color: #d8ebf8;">
+    <!-- Title and Introduction -->
+    <section id="gbv-header" class="text-center py-4">
+        <h1 class="display-5 text-danger">Legal Help for Gender-Based Violence Victims in Kenya</h1>
+        <p class="lead">Comprehensive guidance to help victims of gender-based violence seek justice and navigate the Kenyan legal system.</p>
+    </section>
+
+    <!-- Steps to Take -->
+    <section id="steps-to-take" class="py-4">
+        <div class="container">
+            <h2 class="text-center text-secondary mb-4">Steps to Take When Facing Gender-Based Violence</h2>
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item">
+                    <h5>Step 1: Ensure Your Safety</h5>
+                    <p>If you are in immediate danger, seek safety first. Find a secure location, such as a relative's house, a trusted friend's home, or a shelter.</p>
+                </li>
+                <li class="list-group-item">
+                    <h5>Step 2: Report the Incident</h5>
+                    <p>
+                        Report the violence to the nearest police station or call the emergency hotline <strong>999</strong> or the GBV helpline <strong>1195</strong>. Ensure that the police record the case in the Occurrence Book (OB) and provide you with an OB number for reference.
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <h5>Step 3: Seek Medical Assistance</h5>
+                    <p>
+                        Visit a hospital or a Gender-Based Violence Recovery Centre for medical treatment and documentation of injuries. A <strong>Post Rape Care (PRC) Form</strong> will be issued, which is critical for legal proceedings.
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <h5>Step 4: File a Protection Order</h5>
+                    <p>
+                        Under the <a href="https://kenyalaw.org/kl/fileadmin/pdfdownloads/Acts/Protection_Against_Domestic_Violence_Act_2015.pdf" class="text-primary" target="_blank">Protection Against Domestic Violence Act, 2015</a>, you can apply for a protection order at the Magistrates' Court to safeguard yourself from further harm.
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <h5>Step 5: Access Legal Support</h5>
+                    <p>
+                        Contact legal aid organizations such as <a href="https://www.fidakenya.org/" target="_blank" class="text-primary">FIDA Kenya</a> or the <a href="https://nationalcouncil.go.ke/" target="_blank" class="text-primary">National Legal Aid Service (NLAS)</a> for free legal assistance.
+                    </p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Reporting Mechanisms -->
+    <section id="reporting-mechanisms" class="py-4 position-relative" style="background-image: url('{% static "Images\gbv_backround.jpeg" %}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="overlay position-absolute w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5); top: 0; left: 0;"></div>
+        <div class="container text-white position-relative">
+            <h2 class="text-center text-white mb-4">Reporting Mechanisms for Gender-Based Violence</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Police Stations</h4>
+                    <p>
+                        Report GBV cases at the nearest police station. Insist on having your statement recorded and obtain an Occurrence Book (OB) number.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Gender-Based Violence Recovery Centers</h4>
+                    <p>
+                        Recovery centers provide medical care, counseling, and legal guidance. Key facilities include:
+                        <ul>
+                            <li><strong>Nairobi Women’s Hospital GBV Recovery Centre</strong></li>
+                            <li><strong>Kenyatta National Hospital GBV Desk</strong></li>
+                            <li><strong>Healthcare centers partnered with the Kenya Red Cross</strong></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Legal Process -->
+    <section id="legal-process" class="py-4">
+        <div class="container">
+            <h2 class="text-center text-secondary mb-4">Legal Process for Gender-Based Violence Cases</h2>
+            <p class="text-center mb-4">The Kenyan legal system has specific provisions to handle GBV cases. Follow these stages:</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Stage 1: Filing a Report</h5>
+                    <p>File a formal report at the police station. Provide as much evidence as possible, including medical reports and witness statements.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Stage 2: Investigation</h5>
+                    <p>The police will investigate the case and gather evidence to support prosecution.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Stage 3: Prosecution</h5>
+                    <p>The Office of the Director of Public Prosecutions (ODPP) handles the case in court. Victims may be required to testify as witnesses.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Stage 4: Court Verdict</h5>
+                    <p>The court determines the outcome, including penalties for the perpetrator. Victims may also seek damages for harm caused.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Resources -->
+    <section id="legal-resources" class="py-4">
+        <div class="container">
+            <h2 class="text-center text-secondary mb-4">Key Resources for Gender-Based Violence Victims</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Protection Against Domestic Violence Act, 2015</h5>
+                    <p>Learn about legal provisions that protect victims of GBV.</p>
+                    <a href="https://kenyalaw.org/kl/fileadmin/pdfdownloads/Acts/Protection_Against_Domestic_Violence_Act_2015.pdf" target="_blank" class="btn btn-outline-primary">Read Act</a>
+                </div>
+                <div class="col-md-4">
+                    <h5>Gender Violence Recovery Centres (GVRC)</h5>
+                    <p>GVRCs offer comprehensive care for survivors of GBV, including medical, psychological, and legal support.</p>
+                    <a href="https://gvrc.or.ke/" target="_blank" class="btn btn-outline-primary">Visit GVRC</a>
+                </div>
+                <div class="col-md-4">
+                    <h5>FIDA Kenya</h5>
+                    <p>FIDA Kenya provides legal representation and support for women and children affected by GBV.</p>
+                    <a href="https://www.fidakenya.org/" target="_blank" class="btn btn-outline-primary">Visit FIDA Kenya</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
